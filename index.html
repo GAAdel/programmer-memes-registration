@@ -26,9 +26,14 @@
 
       <main class="main">
         <section class="reg">
-          <div class="container">
+          <div class="container container__reg">
             <h1 class="reg__title">{{ subTitle }}</h1>
-            <form class="reg__form" action="#" method="POST">
+            <form class="reg__form" action="#" method="POST" @submit.prevent>
+              <legend class="reg__legend">Amigo's form</legend>
+              <div class="reg__timer">
+                The clock is ticking:
+                <span class="reg__timer_red">{{timer}}</span>
+              </div>
               <div class="reg__field">
                 <label class="reg__label" for="year"> Name </label>
                 <input
@@ -69,6 +74,14 @@
                   required
                 />
               </div>
+              <button
+                class="button reg__btn"
+                type="submit"
+                :isabled="isDisabledButton"
+                :class="isDisabledButton ? 'reg__btn_disabled' : ''"
+              >
+                Click Me Pls
+              </button>
             </form>
           </div>
         </section>
