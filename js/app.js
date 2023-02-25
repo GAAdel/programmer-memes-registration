@@ -1,7 +1,7 @@
 const App = {
   data() {
     return {
-      title: "Programmer memes registration",
+      title: "Programmer memes",
       subTitle: "Form registration for mem's author",
       isDisabledButton: false,
       timer: "",
